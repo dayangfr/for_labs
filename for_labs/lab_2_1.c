@@ -112,6 +112,36 @@ void pivko_2_1_6() {
 	printf("\n\n\n");
 }
 
+void wind_2_1_7() {
+	float speed;
+	printf("Введите скорость ветра в горах(м/с): ");
+	scanf_s("%f", &speed);
+	printf("\n");
+
+	if (speed >= 25) {
+		printf("Ужасно.");
+	}
+	else if (speed >= 19 && speed < 25) {
+		printf("Очень быстро, опасно для жизни, продвижение почти невозможно");
+	}
+	else if (speed >= 13 && speed < 19) {
+		printf("Быстро, высокая сложность восхождения");
+	}
+	else if (speed >= 8 && speed < 13) {
+		printf("Нормально, средняя сложность восхождения");
+	}
+	else if (speed >= 4 && speed < 8) {
+		printf("Медленно, лёгкий бриз");
+	}
+	else if(speed<4) {
+		printf("Очень медленно, идеально для штурма");
+	}
+	else {
+		printf("Такого не бывает");
+	}
+	printf("\n\n\n");
+}
+
 
 void main() {
 	SetConsoleOutputCP(65001);
@@ -121,4 +151,5 @@ void main() {
 	//n2_1_4();
 	//mountains_2_1_5();
 	//pivko_2_1_6();
+	//wind_2_1_7();
 }
